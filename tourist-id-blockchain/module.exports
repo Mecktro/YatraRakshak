@@ -1,0 +1,20 @@
+module.exports = {
+  networks: {
+    development: {
+      host: "127.0.0.1",   // Localhost IP
+      port: 8545,          // Standard Ethereum port
+      network_id: "*",     // Connect to any network
+    }
+  },
+  compilers: {
+    solc: {
+      version: "0.8.28",   // Use Solidity compiler version 0.8.28
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 200       // Optimize for how many times you expect contract code to be run
+        }
+      }
+    }
+  }
+};
