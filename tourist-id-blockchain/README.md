@@ -55,3 +55,87 @@ After setting the variable, you can run the deployment with the Sepolia network:
 ```shell
 npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
 ```
+To run your app smoothly whenever you want, here are the essential commands in order for your workflow, assuming your setup is ready:
+
+***
+
+## 1. Start the local blockchain node (Hardhat)
+
+Run this in a terminal and keep it running:
+
+```bash
+npx hardhat node
+```
+
+***
+
+## 2. Deploy/redeploy smart contracts (if needed)
+
+In another terminal, run:
+
+```bash
+truffle migrate --config ./truffle-config.cjs --network development
+```
+
+*Use this only when you want to deploy or redeploy contracts.*
+
+***
+
+## 3. Generate Tourist ID from Aadhaar number
+
+Run your Node.js script, passing Aadhaar number and validity days, for example:
+
+```bash
+node scripts/generateIDFromAadhaar.cjs 123412341234 365
+```
+
+*Replace Aadhaar number and days as needed.*
+
+***
+
+## 4. Retrieve Tourist ID details
+
+Create a script `scripts/getTouristDetails.cjs` (or similar) containing your retrieval code. Run:
+
+```bash
+node scripts/getTouristDetails.cjs
+```
+
+*(Make sure to set tourist and police addresses inside the script or pass as arguments.)*
+
+***
+
+### Optional: Streamlined npm scripts (in `package.json`)
+
+Add this section to your `package.json` for easy commands:
+
+```json
+"scripts": {
+  "start-node": "npx hardhat node",
+  "migrate": "truffle migrate --config ./truffle-config.cjs --network development",
+  "generate-id": "node scripts/generateIDFromAadhaar.cjs",
+  "get-id": "node scripts/getTouristDetails.cjs"
+}
+```
+
+Then you can run:
+
+```bash
+npm run start-node
+```
+
+```bash
+npm run migrate
+```
+
+```bash
+npm run generate-id -- 123412341234 365
+```
+
+```bash
+npm run get-id
+```
+
+***
+
+Let me know if help is needed to create the retrieval script or set up the npm scripts!
