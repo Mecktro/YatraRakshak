@@ -1,0 +1,20 @@
+[
+  {
+    "tourist_id": "0xabc123",
+    "encrypted_name": "e9dd81d1f813fd...",
+    "encrypted_nationality": "b21de755ad21...",
+    "kyc_hash": "aadhaar_hash_91723",
+    "ipfs_doc_hash": "Qmc3AGsWXJ2ZWy...",
+    "valid_until": "2025-12-31T23:59:59Z",
+    "is_active": true
+  },
+  {
+    "tourist_id": "0xdef456",
+    "encrypted_name": "c71e93209f8196...",
+    "encrypted_nationality": "ee14da7891d2d...",
+    "kyc_hash": "passport_hash_BX2093",
+    "ipfs_doc_hash": "Qmf64DBXzHKL9T...",
+    "valid_until": "2025-11-22T23:59:59Z",
+    "is_active": true
+  }
+]
